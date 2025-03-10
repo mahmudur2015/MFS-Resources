@@ -5,50 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mfs resources</title>
-    <!-- Daisy UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {},
-      },
-      plugins: [daisyui],
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.js"></script>
-    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {},
+          }
+        };
+      </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+   
+
 </head>
 
 <body class="bg-slate-800">
-<Section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
-    <header>
-        <nav class="flex justify-center items-center mt-10 ">
-           <div class="mt-10 relative flex justify-center items-center w-9/12 mb-10">
-            <img class="w-48 absolute" src="assets/bg.png" alt="">
-            <img class=" w-16" src="assets/Group.png" alt="">
-           </div>
-        </nav>
-    </header>
-    <!-- Login Section -->
-    <div class="">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <div class="card-body">
-              <fieldset class="fieldset">
-                <label class="fieldset-label">Number</label>
-                <input type="number" class="input" placeholder="Type you account number" />
-                <label class="fieldset-label">PIN</label>
-                <input type="text" class="input" placeholder="Type your pin number" />
-                <div><a class="link link-hover">Forgot password?</a></div>
-                <button class="btn btn-neutral mt-4">Login</button>
-              </fieldset>
+    <Section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header>
+            <nav class="flex justify-center items-center mt-10 ">
+                <div class="mt-10 relative flex justify-center items-center w-9/12 mb-10">
+                    <img class="w-48 absolute" src="assets/bg.png" alt="">
+                    <img class=" w-16" src="assets/Group.png" alt="">
+                </div>
+            </nav>
+        </header>
+        <!-- Login Section -->
+        <div class="">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                        <fieldset class="fieldset">
+                            <label class="fieldset-label">Number</label>
+                            <input id="txtNumber" type="number" class="input" placeholder="Type you account number" />
+                            <label class="fieldset-label">PIN</label>
+                            <input id="txtPin" type="text" class="input" placeholder="Type your pin number" />
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <button id="btn-login" class="btn btn-neutral mt-4">Login</button>
+                        </fieldset>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-</Section>
+    </Section>
 
 
 

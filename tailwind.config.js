@@ -1,4 +1,6 @@
-module.exports = {
+
+  module.exports = {
+    content: ["./*.html"],
     plugins: [require("daisyui")],
   };
   
