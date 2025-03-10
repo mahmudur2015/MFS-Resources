@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mfs resources</title>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
+          theme: {  
             extend: {},
           }
         };
       </script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-   
+    
 
 </head>
 
@@ -35,9 +38,9 @@
                     <div class="card-body">
                         <fieldset class="fieldset">
                             <label class="fieldset-label">Number</label>
-                            <input id="txtNumber" type="number" class="input" placeholder="Type you account number" />
+                            <input value="01716772036" id="txtAccountNumber" type="number" class="input" placeholder="Type you account number" required />
                             <label class="fieldset-label">PIN</label>
-                            <input id="txtPin" type="text" class="input" placeholder="Type your pin number" />
+                            <input value="1234" id="txtPinNumber" type="text" class="input" placeholder="Type your pin number" required />
                             <div><a class="link link-hover">Forgot password?</a></div>
                             <button id="btn-login" class="btn btn-neutral mt-4">Login</button>
                         </fieldset>
@@ -48,7 +51,7 @@
     </Section>
 
 
-
+<script src="script/login.js"></script>
 </body>
 
 </html>
