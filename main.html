@@ -25,7 +25,7 @@
       <nav class="flex justify-around items-center">
         <img class="w-16" src="assets/Group.png" alt="">
         <div>
-          <h1  class="text-3xl font-bold">$<span id="total-balance">4500</span></h1>
+          <h1  class="text-3xl font-bold">$<span id="total-balance">0</span></h1>
           <p class="border rounded p-1">available balance</p>
         </div>
         <button class="btn">logout</button>
@@ -35,8 +35,8 @@
         <p>Enjoy easy and convenient financial service with us.
           cashout charge is low and...
         </p>
-        <div id="div-add-money" class=" cards grid grid-cols-3 mt-14 gap-3 p-2">
-          <div class="box border cursor-pointer p-4 text-center rounded-sm">
+        <div class=" cards grid grid-cols-3 mt-14 gap-3 p-2">
+          <div id="div-add-money" class="box border cursor-pointer p-4 text-center rounded-sm">
             <img class=" w-8 mx-auto" src="assets/wallet1.png" alt="">
             <h3>Add Money</h3>
           </div>
@@ -110,15 +110,15 @@
                       <option value="ROCKET">Rocket</option>
                     </select>
                     <label class="fieldset-label">Number</label>
-                    <input value="01716772036" id="txtAccountNumber" type="number" class="input"
+                    <input value="01716772036" id="txtCashOutAccountNumber" type="number" class="input"
                       placeholder="Type you account number" required />
 
                       <label class="fieldset-label">Type Your Amount</label>
-                    <input value="" id="txtAmount" type="number" class="input"
+                    <input value="" id="txtCashOutAmount" type="number" class="input"
                       placeholder="Type your amount" required />
 
                     <label class="fieldset-label">PIN</label>
-                    <input value="1234" id="txtPinNumber" type="text" class="input" placeholder="Type your pin number"
+                    <input value="1234" id="txtCashOutPinNumber" type="text" class="input" placeholder="Type your pin number"
                       required />
                     <div><a class="link link-hover">Forgot Pin?</a></div>
                     <button id="cash-out" class="btn btn-neutral bg-blue-700 mt-4">Cash Out</button>
@@ -132,8 +132,11 @@
 
     </header>
   </section>
-  <script src="script/addmoney.js"></script>
+  <script src="script/utility.js"></script>
   <script src="script/toggle.js"></script>
+  <script src="script/addmoney.js"></script>
+  <script src="script/cashout.js"></script>
+ 
 </body>
 
 </html>
