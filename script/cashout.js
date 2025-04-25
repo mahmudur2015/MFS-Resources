@@ -1,4 +1,9 @@
 
+document.getElementById('btn-logout').addEventListener('click', function (event) {
+        event.preventDefault()
+        window.location.href="./index.html"
+    });
+
 document.getElementById('cash-out').addEventListener('click', function (event) {
     event.preventDefault();
 

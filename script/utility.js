@@ -1,4 +1,4 @@
-
+// reuseable dynamic function
 
 function getInputValueById(id) {
     const value= document.getElementById(id).value;
@@ -10,5 +10,9 @@ function getInnerTextById(id){
     const value= document.getElementById(id).innerText;
     const convertedValue=parseFloat(value);
     return convertedValue;
+}
+
+function setInnerTextByIdandValue(id,value){
+ document.getElementById(id).innerText=value;
 }
 
