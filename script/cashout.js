@@ -10,15 +10,6 @@ document.getElementById('cash-out').addEventListener('click', function (event) {
     const accountNumber = document.getElementById("txtCashOutAccountNumber").value;
     const convertedaccountNumber = parseInt(accountNumber);
 
-    // const pinNumber = document.getElementById("txtCashOutPinNumber").value;
-    // const convertedPin = parseInt(pinNumber);
-
-    // const totalBalance = document.getElementById('total-balance').innerText;
-    // const convertedTotalBalance = parseFloat(totalBalance);
-
-    // const amount = document.getElementById("txtCashOutAmount").value;
-    // const convertedAmount = parseFloat(amount);
-
     const convertedPin = getInputValueById("txtCashOutPinNumber");
     const convertedTotalBalance=getInnerTextById("total-balance");
     const convertedAmount=getInputValueById("txtCashOutAmount");
@@ -28,8 +19,6 @@ document.getElementById('cash-out').addEventListener('click', function (event) {
             if (convertedTotalBalance > 0) {
                 if (convertedAmount > 0) {
                     const sum = convertedTotalBalance - convertedAmount;
-
-                    // document.getElementById('total-balance').innerText = sum;
                     setInnerTextByIdandValue('total-balance',sum);
 
                     const historyContainer=document.getElementById('transaction-container')
