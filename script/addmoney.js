@@ -18,8 +18,6 @@ document.getElementById('add-money').addEventListener('click', function (event) 
     const convertedTotalBalance=getInnerTextById("total-balance");
     const convertedAmount=getInputValueById("txtAmount");
 
-
-
         if (accountNumber.length === 11) {
         if (convertedPin === 1234) {
             if(convertedAmount>0)
@@ -28,7 +26,14 @@ document.getElementById('add-money').addEventListener('click', function (event) 
 
             //   document.getElementById('total-balance').innerText=sum;
               setInnerTextByIdandValue('total-balance',sum);
-              
+
+              const historyContainer=document.getElementById('transaction-container')
+              const p=document.createElement("p");
+              p.innerText=`
+               added ${sum} from ${convertedAmount} account number.
+              `
+              historyContainer.appendChild(p);
+
             }
             else
             {

@@ -10,14 +10,18 @@ document.getElementById('cash-out').addEventListener('click', function (event) {
     const accountNumber = document.getElementById("txtCashOutAccountNumber").value;
     const convertedaccountNumber = parseInt(accountNumber);
 
-    const pinNumber = document.getElementById("txtCashOutPinNumber").value;
-    const convertedPin = parseInt(pinNumber);
+    // const pinNumber = document.getElementById("txtCashOutPinNumber").value;
+    // const convertedPin = parseInt(pinNumber);
 
-    const totalBalance = document.getElementById('total-balance').innerText;
-    const convertedTotalBalance = parseFloat(totalBalance);
+    // const totalBalance = document.getElementById('total-balance').innerText;
+    // const convertedTotalBalance = parseFloat(totalBalance);
 
-    const amount = document.getElementById("txtCashOutAmount").value;
-    const convertedAmount = parseFloat(amount);
+    // const amount = document.getElementById("txtCashOutAmount").value;
+    // const convertedAmount = parseFloat(amount);
+
+    const convertedPin = getInputValueById("txtCashOutPinNumber");
+    const convertedTotalBalance=getInnerTextById("total-balance");
+    const convertedAmount=getInputValueById("txtCashOutAmount");
 
     if (accountNumber.length === 11) {
         if (convertedPin === 1234) {
@@ -25,7 +29,15 @@ document.getElementById('cash-out').addEventListener('click', function (event) {
                 if (convertedAmount > 0) {
                     const sum = convertedTotalBalance - convertedAmount;
 
-                    document.getElementById('total-balance').innerText = sum;
+                    // document.getElementById('total-balance').innerText = sum;
+                    setInnerTextByIdandValue('total-balance',sum);
+
+                    const historyContainer=document.getElementById('transaction-container')
+                    const p=document.createElement("p");
+                    p.innerText=`
+                     Cash out ${convertedAmount} from ${accountNumber} account number.
+                    `
+                    historyContainer.appendChild(p);
                 }
                 else {
                     alert("please enter valid amount.")
