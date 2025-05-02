@@ -19,7 +19,7 @@ document.getElementById('add-money').addEventListener('click', function (event) 
               const historyContainer=document.getElementById('transaction-container')
               const p=document.createElement("p");
               p.innerText=`
-               added ${sum} from ${convertedAmount} account number.
+               added ${convertedAmount} from ${accountNumber} account number.
               `
               historyContainer.appendChild(p);
 
